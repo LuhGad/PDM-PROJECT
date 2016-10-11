@@ -72,14 +72,18 @@
             window.canvas2ImagePlugin.saveImageDataToLibrary(
                 function(msg){
                     alert(msg);
+				$location.path( "/inicio" );
+        
                 },
                 function(err){
                     alert(err);
-                },
+		        },
                 document.getElementById('canvas')
             );
         }
 
+		
+        
 
         //fim ImageController
     }

@@ -17,6 +17,11 @@
             controller   : 'HomeController',
             controllerAs : 'Home'
         })
+		.when('/inicio', {
+            templateUrl  : 'app/views/home.html',
+            controller   : 'HomeController',
+            controllerAs : 'Home'
+        })
         .when('/image/:title', {
             templateUrl  : 'app/views/image.html',
             controller   : 'ImageController',

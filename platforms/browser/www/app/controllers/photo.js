@@ -32,10 +32,10 @@
 
             //Create a watermark image object
             watermark = new Image();
-            watermark.src = "logoS.png";
+            watermark.src = "logo.png";
 
             watermark.onload = function(e){
-                canvas.drawImage(watermark, 1, 1, 150, 150);
+                canvas.drawImage(watermark, 1, 1, 150, 75);
             }
 
             //Imagem Principal
@@ -65,6 +65,24 @@
             alert('Failed because: ' + message);
         }
 
+
+
+ // using Toast with cordovaToast
+        $scope.salvar = function (){
+          window.plugins.toast.showShortBottom('Salvando...');
+            window.canvas2ImagePlugin.saveImageDataToLibrary(
+                function(msg){
+                    window.plugins.toast.showLongBottom('Salvo');
+                    $location.path( "/inicio" );
+                },
+                function(err){
+                    window.plugins.toast.showLongBottom('ERROR: ' + msg);
+                },
+                document.getElementById('canvas')
+            );
+        }
+		
+        
 
         //fim ImageController
     }

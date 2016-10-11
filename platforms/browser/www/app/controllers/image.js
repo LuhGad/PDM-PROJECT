@@ -13,8 +13,9 @@
         // Lógica aqui
         // ...
 
+        //change default directory at : platforms/android/src/com/subitolabs/cordova/galleryapi/GalleryAPI.java
         galleryAPI.getMedia('Camera', function(items){
-            for(var i = 0; i < items.length; i++){
+            for(var i = 0; i <= items.length; i++){
               if(items[i].title == $routeParams.title){
                 $scope.media = items[i];
                 break;

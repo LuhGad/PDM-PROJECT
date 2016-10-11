@@ -12,7 +12,7 @@
 
         // Lógica aqui
         // ...
-        $scope.msg = "Galeria";
+        $scope.msg = "Pictures";
 
 
         // pegar imagens da galeria, plasta principal Images
@@ -24,13 +24,18 @@
           $scope.images = [];
 
           galleryAPI.getMedia('Camera', function(items){
-              for(var i = items.length; i > 0; i--){
+              for(var i = items.length; i >= 0; i--){
                   $scope.images.push(items[i]);
               }
           }, function(error){alert(error);});
 
 
 
+
+  $scope.updateGallery = function(){
+          $scope.getGallery();
+          window.plugins.toast.showLongBottom('Atualizado!');
+        }
 
 
 

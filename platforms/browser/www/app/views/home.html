@@ -8,12 +8,13 @@
           <a href="#/photo" class="link-camera"><ons-icon icon="md-camera"></ons-icon></a>
         </ons-toolbar-button>
         <ons-toolbar-button>
-          <a href="#/photo" class="link-camera"><ons-icon icon="md-settings"></ons-icon></a>
+          <a class="link-camera" ng-click="updateGallery()"><ons-icon icon="md-refresh"></ons-icon></a>
         </ons-toolbar-button>
+
       </div>
     </ons-toolbar>
 
-    <h2 class="aling-center">{{ msg }} : ({{images.length}})</h2>
+    <h2 class="aling-center">{{ msg }} : ({{images.length - 1}})</h2>
 
     <div id="content">
 

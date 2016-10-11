@@ -20,14 +20,15 @@
 
     <div style="text-align: center; margin-top: 20px;">
       <p style="margin-botton: 15px;">
-        <ons-button ng-click="salvar()"><ons-icon icon="md-save"></ons-icon> Salvar</ons-button>
-		 <ons-button ng-disabled="buttonCheck"></ons-icon><a href="index.html"> Galeria  </a></ons-button>
-
+	<ons-button ng-click="salvar()" ng-disabled="buttonCheck"><ons-icon icon="md-save"></ons-icon> Salvar Foto</ons-button>
+		
       </p>
       <canvas id="canvas" width="100%" ></canvas>
       <img ng-src="" width="100%" id="myImage"/>
     </div>
 
     <br/>
+	
+	
   </ons-page>
 </ons-navigator>
