@@ -1,0 +1,36 @@
+
+<ons-navigator var="myNavigator">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <a href="#/"><ons-back-button>Voltar</ons-back-button></a>
+      </div>
+      <div class="center">Projeto PDM</div>
+      <div class="right">
+        <ons-toolbar-button>
+          <a href="#/photo" class="link-camera"><ons-icon icon="md-camera"></ons-icon></a>
+        </ons-toolbar-button>
+        <ons-toolbar-button>
+          <a href="#/photo" class="link-camera"><ons-icon icon="md-settings"></ons-icon></a>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+
+
+    <img ng-src="{{media.data}}" width="100%"/>
+    <ons-list>
+      <ons-list-header>Detalhes</ons-list-header>
+      <ons-list-item>Criado em: {{media.date_create}}</ons-list-item>
+      <ons-list-item>Titulo: {{media.title}}</ons-list-item>
+      <ons-list-item>Lat: {{media.lat}}</ons-list-item>
+      <ons-list-item>Lon: {{media.lon}}</ons-list-item>
+      <ons-list-item>Largura: {{media.width}}</ons-list-item>
+      <ons-list-item>Altura: {{media.height}}</ons-list-item>
+      <ons-list-item>Tamanho: {{(media.size / 1048576).toFixed(2)}}mb</ons-list-item>
+      <ons-list-item>Local: {{media.data}}</ons-list-item>
+      <ons-list-item>Thumb: {{media.thumbnail}}</ons-list-item>
+      <ons-list-item>ID: {{media.id}}</ons-list-item>
+    <ons-list>
+    <br/>
+  </ons-page>
+</ons-navigator>

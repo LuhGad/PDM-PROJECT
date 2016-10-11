@@ -1,0 +1,31 @@
+
+<ons-navigator var="myNavigator">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <a href="#/"><ons-back-button>Voltar</ons-back-button></a>
+      </div>
+      <div class="center">Projeto PDM</div>
+      <div class="right">
+        <ons-toolbar-button>
+          <a href="#/photo" class="link-camera"><ons-icon icon="md-camera"></ons-icon></a>
+        </ons-toolbar-button>
+        <ons-toolbar-button>
+          <a href="#/photo" class="link-camera"><ons-icon icon="md-settings"></ons-icon></a>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+
+    {{msg}}
+
+    <div style="text-align: center; margin-top: 20px;">
+      <p style="margin-botton: 15px;">
+        <ons-button ng-click="page.login()"><ons-icon icon="md-save"></ons-icon> Salvar</ons-button>
+      </p>
+      <canvas id="canvas" width="100%" ></canvas>
+      <img ng-src="" width="100%" id="myImage"/>
+    </div>
+
+    <br/>
+  </ons-page>
+</ons-navigator>
